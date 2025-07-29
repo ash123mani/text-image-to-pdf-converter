@@ -1,6 +1,7 @@
 .home-page-header {
   margin: auto;
   text-align: center;
+  border-bottom: 1px solid #ccc;
 }
 
 input[type="file"] {
@@ -12,15 +13,33 @@ input[type="file"] {
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
+  position: sticky;
+  top: 0;
 }
 
 .home-page-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  height: calc(100vh - 92px);
+  justify-content: center;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 100%;
+  background-color: #ccc;
+}
+
+.upload-section {
+  padding: 20px;
+  flex: 1;
+  overflow: auto;
 }
 
 .generated-section {
   white-space: pre-wrap;
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
 }
 
 #file-list {

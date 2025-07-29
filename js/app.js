@@ -17,16 +17,16 @@ uploader.addEventListener('change', (event) => {
     const fileItem = document.createElement('div');
     fileItem.style.marginBottom = '10px';
 
-    const name = document.createElement('strong');
-    name.textContent = file.name;
-    fileItem.appendChild(name);
+    // const name = document.createElement('strong');
+    // name.textContent = file.name;
+    // fileItem.appendChild(name);
 
     // Preview for images
     if (file.type.startsWith('image/')) {
       const img = document.createElement('img');
       img.src = URL.createObjectURL(file);
-      img.style.maxWidth = '400px';
-      img.style.maxHeight = '400px';
+      img.style.maxWidth = '600px';
+      img.style.maxHeight = '600px';
       img.style.display = 'block';
       img.style.marginTop = '5px';
       fileItem.appendChild(img);
